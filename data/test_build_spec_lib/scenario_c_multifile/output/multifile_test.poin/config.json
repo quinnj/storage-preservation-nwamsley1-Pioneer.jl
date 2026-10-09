@@ -1,87 +1,87 @@
 {
-  "calibration_raw_file": "",
-  "max_koina_batch": 100,
-  "fasta_header_regex_proteins": [
-    "^\\w+\\|(?:\\w+(?:-\\d+)?)\\|[^ ]+ (.*?) [^ ]+=",
-    "^\\w+\\|(?:\\w+(?:-\\d+)?)\\|[^ ]+ (.*?) [^ ]+="
-  ],
-  "comment_library": "=== If auto_detect_frag_bounds=true, bounds are determined from the calibration_raw_file; otherwise manual values are used ===",
-  "variable_mods": {
-    "name": [],
-    "pattern": [],
-    "mass": []
-  },
-  "predict_fragments": true,
-  "comment_fasta": "=== FASTA files ===",
-  "fasta_header_regex_genes": [
-    " GN=(\\S+)",
-    " GN=(\\S+)"
-  ],
-  "library_params": {
-    "auto_detect_frag_bounds": false,
-    "prediction_model": "altimeter",
-    "prec_mz_min": 390.0,
-    "prec_mz_max": 1010.0,
-    "instrument_type": "NONE",
-    "frag_mz_min": 150.0,
-    "frag_mz_max": 2020.0
-  },
-  "_lib_dir": "/Users/nathanwamsley/Projects/Pioneer.jl/test/Routines/BuildSpecLib/../../../data/test_build_spec_lib/scenario_c_multifile/output/multifile_test.poin",
-  "fasta_names": [
-    "PROTEINS1",
-    "PROTEINS2"
-  ],
-  "match_lib_build_batch": 100000,
-  "comment_processing": "=== Processing settings ===",
-  "comment_output": "=== Output library path ===",
-  "library_path": "/Users/nathanwamsley/Projects/Pioneer.jl/test/Routines/BuildSpecLib/../../../data/test_build_spec_lib/scenario_c_multifile/output/multifile_test",
+  "_lib_dir": "/Users/jacob.quinn/Documents/Codex/2026-09-04/can/inline-downstream/Pioneer/test/Routines/BuildSpecLib/../../../data/test_build_spec_lib/scenario_c_multifile/output/multifile_test.poin",
   "_lib_name": "multifile_test",
-  "comment_fasta_regex": "=== FASTA header parsing (defaults work for UniProt format) ===",
-  "nce_params": {
-    "nce": 26.0,
-    "dynamic_nce": true,
-    "default_charge": 2
-  },
+  "calibration_raw_file": "",
   "comment_calibration": "=== Convert a representative RAW file to Arrow format and provide its path here ===",
-  "fasta_header_regex_organisms": [
-    " OS=([^ ]+.*?) [^ ]+=",
-    " OS=([^ ]+.*?) [^ ]+="
-  ],
-  "comment_modifications": "=== Modifications (variable and fixed, including PTMs and peptide-terminal labels) ===",
+  "comment_collision_energy": "=== Collision energy settings ===",
   "comment_digestion": "=== Protein digestion parameters ===",
-  "fasta_paths": [
-    "/Users/nathanwamsley/Projects/Pioneer.jl/test/Routines/BuildSpecLib/../../../data/test_fasta_files/fastas_dir1/proteins1.fasta",
-    "/Users/nathanwamsley/Projects/Pioneer.jl/test/Routines/BuildSpecLib/../../../data/test_fasta_files/fastas_dir1/proteins2.fasta.gz"
-  ],
+  "comment_fasta": "=== FASTA files ===",
+  "comment_fasta_regex": "=== FASTA header parsing (defaults work for UniProt format) ===",
+  "comment_library": "=== If auto_detect_frag_bounds=true, bounds are determined from the calibration_raw_file; otherwise manual values are used ===",
+  "comment_modifications": "=== Modifications (variable and fixed, including PTMs and peptide-terminal labels) ===",
+  "comment_output": "=== Output library path ===",
+  "comment_processing": "=== Processing settings ===",
+  "comment_seed": "=== RNG seed for decoy/entrapment shuffling. Fixed seed => fully reproducible library; different seed => different shuffled decoy/entrapment sequences. ===",
+  "fasta_digest_params": {
+    "add_decoys": true,
+    "cleavage_regex": "[KR][^_|$]",
+    "decoy_method": "shuffle",
+    "entrapment_method": "shuffle",
+    "entrapment_r": 0,
+    "max_charge": 3,
+    "max_length": 15,
+    "max_var_mods": 1,
+    "min_charge": 2,
+    "min_length": 8,
+    "missed_cleavages": 1,
+    "specificity": "full"
+  },
   "fasta_header_regex_accessions": [
     "^\\w+\\|(\\w+(?:-\\d+)?)\\|",
     "^\\w+\\|(\\w+(?:-\\d+)?)\\|"
   ],
-  "fasta_digest_params": {
-    "cleavage_regex": "[KR][^_|$]",
-    "add_decoys": true,
-    "decoy_method": "shuffle",
-    "missed_cleavages": 1,
-    "min_charge": 2,
-    "max_length": 15,
-    "min_length": 8,
-    "entrapment_r": 0,
-    "max_var_mods": 1,
-    "max_charge": 3,
-    "entrapment_method": "shuffle"
-  },
-  "comment_collision_energy": "=== Collision energy settings ===",
-  "isotope_mod_groups": [],
-  "include_contaminants": false,
+  "fasta_header_regex_genes": [
+    " GN=(\\S+)",
+    " GN=(\\S+)"
+  ],
+  "fasta_header_regex_organisms": [
+    " OS=([^ ]+.*?) [^ ]+=",
+    " OS=([^ ]+.*?) [^ ]+="
+  ],
+  "fasta_header_regex_proteins": [
+    "^\\w+\\|(?:\\w+(?:-\\d+)?)\\|[^ ]+ (.*?) [^ ]+=",
+    "^\\w+\\|(?:\\w+(?:-\\d+)?)\\|[^ ]+ (.*?) [^ ]+="
+  ],
+  "fasta_names": [
+    "PROTEINS1",
+    "PROTEINS2"
+  ],
+  "fasta_paths": [
+    "/Users/jacob.quinn/Documents/Codex/2026-09-04/can/inline-downstream/Pioneer/test/Routines/BuildSpecLib/../../../data/test_fasta_files/fastas_dir1/proteins1.fasta",
+    "/Users/jacob.quinn/Documents/Codex/2026-09-04/can/inline-downstream/Pioneer/test/Routines/BuildSpecLib/../../../data/test_fasta_files/fastas_dir1/proteins2.fasta.gz"
+  ],
   "fixed_mods": {
+    "mass": [
+      57.021464
+    ],
     "name": [
       "Unimod:4"
     ],
     "pattern": [
       "C"
-    ],
-    "mass": [
-      57.021464
     ]
+  },
+  "include_contaminants": false,
+  "isotope_mod_groups": [],
+  "library_params": {
+    "auto_detect_frag_bounds": false,
+    "frag_mz_max": 2020.0,
+    "frag_mz_min": 150.0,
+    "prec_mz_max": 1010.0,
+    "prec_mz_min": 390.0,
+    "prediction_model": "altimeter"
+  },
+  "library_path": "/Users/jacob.quinn/Documents/Codex/2026-09-04/can/inline-downstream/Pioneer/test/Routines/BuildSpecLib/../../../data/test_build_spec_lib/scenario_c_multifile/output/multifile_test",
+  "match_lib_build_batch": 100000,
+  "max_koina_batch": 100,
+  "nce_params": {
+    "nce": 26.0
+  },
+  "predict_fragments": true,
+  "seed": 1844,
+  "variable_mods": {
+    "mass": [],
+    "name": [],
+    "pattern": []
   }
 }
